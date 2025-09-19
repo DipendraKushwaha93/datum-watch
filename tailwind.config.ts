@@ -13,6 +13,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +60,23 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Verdict color system
+        "verdict-true": "hsl(var(--verdict-true))",
+        "verdict-true-bg": "hsl(var(--verdict-true-bg))",
+        "verdict-true-border": "hsl(var(--verdict-true-border))",
+        "verdict-false": "hsl(var(--verdict-false))",
+        "verdict-false-bg": "hsl(var(--verdict-false-bg))",
+        "verdict-false-border": "hsl(var(--verdict-false-border))",
+        "verdict-doubtful": "hsl(var(--verdict-doubtful))",
+        "verdict-doubtful-bg": "hsl(var(--verdict-doubtful-bg))",
+        "verdict-doubtful-border": "hsl(var(--verdict-doubtful-border))",
+        // Metric colors
+        "metric-positive": "hsl(var(--metric-positive))",
+        "metric-positive-bg": "hsl(var(--metric-positive-bg))",
+        "metric-warning": "hsl(var(--metric-warning))",
+        "metric-warning-bg": "hsl(var(--metric-warning-bg))",
+        "metric-danger": "hsl(var(--metric-danger))",
+        "metric-danger-bg": "hsl(var(--metric-danger-bg))",
       },
       borderRadius: {
         lg: "var(--radius)",

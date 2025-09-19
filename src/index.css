@@ -2,84 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* FactGuard AI Dashboard Design System
+Professional misinformation detection platform with clean aesthetics and semantic verdict colors.
+All colors are HSL for consistent theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base colors - soft neutrals */
+    --background: 0 0% 99%;
+    --foreground: 222.2 20% 11%;
 
+    /* Card system with subtle depth */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222.2 20% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222.2 20% 11%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary brand - sophisticated blue */
+    --primary: 224 71% 14%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - soft gray system */
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 222.2 47% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones for subtle elements */
+    --muted: 220 13% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent for interactive elements */
+    --accent: 220 13% 96%;
+    --accent-foreground: 222.2 47% 11%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive states */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Border and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71% 14%;
+
+    /* Verdict color system - semantic colors for AI analysis */
+    --verdict-true: 142 76% 36%;          /* Green - content is true */
+    --verdict-true-bg: 142 76% 97%;       /* Light green background */
+    --verdict-true-border: 142 76% 85%;   /* Green border */
+    
+    --verdict-false: 0 84% 60%;           /* Red - content is false */
+    --verdict-false-bg: 0 84% 97%;        /* Light red background */
+    --verdict-false-border: 0 84% 85%;    /* Red border */
+    
+    --verdict-doubtful: 43 96% 56%;       /* Amber - content is doubtful */
+    --verdict-doubtful-bg: 43 96% 97%;    /* Light amber background */
+    --verdict-doubtful-border: 43 96% 85%; /* Amber border */
+    
+    /* Dashboard metrics */
+    --metric-positive: 142 76% 36%;
+    --metric-positive-bg: 142 76% 97%;
+    
+    --metric-warning: 43 96% 56%;
+    --metric-warning-bg: 43 96% 97%;
+    
+    --metric-danger: 0 84% 60%;
+    --metric-danger-bg: 0 84% 97%;
+    
+    /* Professional elevation system */
+    --shadow-subtle: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+    --shadow-elevated: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
 
     --radius: 0.5rem;
 
+    /* Professional sidebar system */
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-foreground: 222.2 20% 25%;
+    --sidebar-primary: 224 71% 14%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 220 13% 94%;
+    --sidebar-accent-foreground: 222.2 20% 25%;
+    --sidebar-border: 220 13% 88%;
+    --sidebar-ring: 224 71% 14%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -100,6 +123,39 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+}
+
+@layer utilities {
+  /* Verdict status utilities */
+  .verdict-true {
+    @apply bg-verdict-true-bg text-verdict-true border border-verdict-true-border;
+  }
+  
+  .verdict-false {
+    @apply bg-verdict-false-bg text-verdict-false border border-verdict-false-border;
+  }
+  
+  .verdict-doubtful {
+    @apply bg-verdict-doubtful-bg text-verdict-doubtful border border-verdict-doubtful-border;
+  }
+
+  /* Card shadows */
+  .shadow-subtle {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Smooth interactions */
+  .transition-smooth {
+    @apply transition-all duration-200 ease-out;
   }
 }
